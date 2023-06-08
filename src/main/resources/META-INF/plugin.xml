@@ -1,0 +1,52 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.autentia.orion</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Orion</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="oscar.sanchez@autentia.com" url="https://www.autentia.com/">Autentia</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Orion is a plugin that allows you to send requests to OpenAI CODEX API and get responses from it.
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.autentia.orion.OrionToolWindowFactory"
+                    id="Orion"
+                    anchor="right"
+                    icon="AllIcons.Debugger.Console"/>
+        <applicationService
+                serviceInterface="com.autentia.orion.service.ApiService"
+                serviceImplementation="com.autentia.orion.service.OpenAIApiServiceImpl"/>
+
+                <applicationService
+                        serviceImplementation="com.autentia.orion.settings.AppSettingsState"/>
+
+                <applicationConfigurable
+                        parentId="tools"
+                        instance="com.autentia.orion.settings.AppSettingsConfigurable"
+                        id="com.autentia.orion.settings.AppSettingsConfigurable"
+                        displayName="Orion Settings"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="actions.AddSelectedText" class="com.autentia.orion.action.AddSelectedText" text="Add to Orion"
+                description="Adds selected text into Orion plugin" icon="AllIcons.Debugger.Console">
+            <add-to-group group-id="EditorPopupMenu" anchor="before" relative-to-action="$SearchWeb"/>
+        </action>
+    </actions>
+</idea-plugin>
