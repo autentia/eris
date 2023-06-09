@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "orion"
+rootProject.name = "eris"

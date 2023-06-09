@@ -1,4 +1,4 @@
-package com.autentia.orion.settings;
+package com.autentia.eris.settings;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @State(
-        name = "com.autentia.orion.settings.AppSettingsState",
-        storages = @Storage("OrionSettingsPlugin.xml")
+        name = "com.autentia.eris.settings.AppSettingsState",
+        storages = @Storage("ErisSettingsPlugin.xml")
 )
 public class AppSettingsState implements PersistentStateComponent<AppSettingsState> {
 

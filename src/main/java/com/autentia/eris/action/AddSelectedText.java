@@ -1,6 +1,6 @@
-package com.autentia.orion.action;
+package com.autentia.eris.action;
 
-import com.autentia.orion.service.ComponentService;
+import com.autentia.eris.service.ComponentService;
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -25,7 +25,7 @@ public class AddSelectedText extends DumbAwareAction {
         CaretModel caretModel = ediTorRequiredData.getCaretModel();
         String selectedText = caretModel.getCurrentCaret().getSelectedText();
 
-        ToolWindow toolWindow = ToolWindowManager.getInstance(Objects.requireNonNull(event.getProject())).getToolWindow("Orion");
+        ToolWindow toolWindow = ToolWindowManager.getInstance(Objects.requireNonNull(event.getProject())).getToolWindow("Eris");
         if (toolWindow != null) {
             toolWindow.show();
         }

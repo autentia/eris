@@ -1,6 +1,6 @@
-package com.autentia.orion.service;
+package com.autentia.eris.service;
 
-import com.autentia.orion.settings.AppSettingsState;
+import com.autentia.eris.settings.AppSettingsState;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.service.OpenAiService;
 

@@ -1,4 +1,4 @@
-package com.autentia.orion.settings;
+package com.autentia.eris.settings;
 
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.util.NlsContexts;
@@ -13,7 +13,7 @@ public class AppSettingsConfigurable implements Configurable {
 
     @Override
     public @NlsContexts.ConfigurableName String getDisplayName() {
-        return "Orion Settings";
+        return "Eris Settings";
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.autentia.orion.service;
+package com.autentia.eris.service;
 
 import com.intellij.openapi.components.Service;
 

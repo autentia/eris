@@ -1,7 +1,7 @@
-package com.autentia.orion;
+package com.autentia.eris;
 
-import com.autentia.orion.listener.EnterKeyListener;
-import com.autentia.orion.service.ComponentService;
+import com.autentia.eris.listener.EnterKeyListener;
+import com.autentia.eris.service.ComponentService;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.ui.SearchTextField;
@@ -10,7 +10,7 @@ import com.intellij.ui.components.JBScrollPane;
 import javax.swing.*;
 import java.awt.*;
 
-public class OrionToolWindow {
+public class ErisToolWindow {
 
     private final JPanel contentToolWindow;
 
@@ -18,7 +18,7 @@ public class OrionToolWindow {
         return contentToolWindow;
     }
 
-    public OrionToolWindow() {
+    public ErisToolWindow() {
         contentToolWindow = new SimpleToolWindowPanel(true, false);
         JTextArea northTextArea = new JTextArea(5, 20);
         northTextArea.setName("northArea");

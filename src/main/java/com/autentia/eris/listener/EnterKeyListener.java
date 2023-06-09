@@ -1,6 +1,6 @@
-package com.autentia.orion.listener;
+package com.autentia.eris.listener;
 
-import com.autentia.orion.service.ApiService;
+import com.autentia.eris.service.ApiService;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.ui.SearchTextField;
 

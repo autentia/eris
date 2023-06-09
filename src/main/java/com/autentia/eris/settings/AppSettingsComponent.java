@@ -1,4 +1,4 @@
-package com.autentia.orion.settings;
+package com.autentia.eris.settings;
 
 import com.intellij.ui.components.JBLabel;
 import com.intellij.ui.components.JBTextField;
