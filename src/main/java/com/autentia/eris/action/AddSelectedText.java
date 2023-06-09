@@ -15,6 +15,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 import java.util.Objects;
 
+import static com.autentia.eris.component.Components.CONTEXT_TEXT_AREA;
+
 /**
  * Action that adds selected text into the plugin upper text area
  */
@@ -31,8 +33,8 @@ public class AddSelectedText extends DumbAwareAction {
         }
 
         ComponentService applicationService = ApplicationManager.getApplication().getService(ComponentService.class);
-        JTextArea northText = (JTextArea) applicationService.getComponentByName("northArea");
-        northText.setText(selectedText);
+        JTextArea contextTextArea = (JTextArea) applicationService.getComponentByName(CONTEXT_TEXT_AREA.component);
+        contextTextArea.setText(selectedText);
     }
 
     @Override
