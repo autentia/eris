@@ -1,8 +1,7 @@
-<!-- PROJECT LOGO -->
+<a name="readme-top"></a>
 <br />
 <div align="center">
 <h1 align="center">Eris</h1>
-<a name="readme-top"></a>
   <p align="center">
     A fast and secure OpenAI Api integration plugin for your IntelliJ IDEA
     <br />
